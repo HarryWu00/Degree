@@ -9,9 +9,9 @@ let A = Matrix([
 ]);
 //Code here
 function degree(mtrx,v){
-  let sum == 0;
-  let degreelist == A.size();
-  let degreelist = mtrx(v-1);
+  let sum = 0;
+  let degreelist = A.size();
+  let degreelist = mtrx(v- 1);
   for(var a=0;a<degreelist.length;a++){
     sum += (degreelist[a]);
   }
