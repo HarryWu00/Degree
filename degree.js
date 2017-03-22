@@ -8,24 +8,27 @@ let A = Matrix([
     [0,0,0,1,0]
 ]);
 //Code here
-function degree(mtrx,v){
+function degree(mtrx,v)
+{
   let sum = 0;
-  let degreelist = A.size();
-  let degreelist = mtrx(v-1);
-  for(var a=0;a<degreelist.length;a++){
-    sum += (degreelist[a]);
-    return sum;
+  let degreeList = mtrx(v-1);
+
+  for(let i = 0; i < degreeList.length; i++)
+  {
+    sum += degreeList[i];
   }
+  return sum;
 }
 
-function degreecentrality(mtrx,v){
-  let neighbors = mtrx(v).length-1;
-  return
-
+function degreecentrality(mtrx, v)
+{
+  let neighbors = mtrx(v-1).length;
+  let mtrxDegree = (degree(mtrx, v) / neighbors);
+  return mtrxDegree;  
 }
 
 //Challenge
-
+//degree(A, 1);
 //Run test code with ctrl+shift+p  then type in "script"
-console.log(degree(A,3));
-console.log(degreecentrality(A,2));
+//console.log(degree(A,4));
+console.log(degreecentrality(A, 2));
